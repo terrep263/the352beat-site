@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Got a tip? — The 352 Beat</title>
+<meta name="description" content="Tell The 352 Beat what's happening around Lake County — a new business, an event, good news, or a shoutout." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,900&family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{--blue:#0021A5;--blue-deep:#001A82;--orange:#FA4616;--orange-deep:#D8390E;--aqua:#1FA8B8;--green:#4C8C3F;--cream:#FBF6EC;--ink:#23201A;--muted:#6B6457;--line:#E7DEC9;--serif:'Fraunces',Georgia,serif;--sans:'Libre Franklin',system-ui,sans-serif;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased;}
+  a{color:var(--blue);text-decoration:none;}
+  .wrap{max-width:760px;margin:0 auto;padding:0 28px;}
+  .nav{border-bottom:2px solid var(--blue);}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;}
+  .brand{font-family:var(--serif);font-weight:900;font-size:22px;color:var(--blue);line-height:1;}
+  .brand small{display:block;font-family:var(--sans);font-weight:600;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:3px;}
+  .gate{padding:54px 0 72px;}
+  .eyebrow{font-family:var(--sans);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--orange-deep);}
+  h1{font-family:var(--serif);font-weight:900;font-size:clamp(30px,4.6vw,46px);line-height:1.08;letter-spacing:-.02em;color:var(--blue);margin:14px 0 12px;}
+  .teaser{font-size:19px;color:#3c3830;margin-bottom:8px;}
+  .card{background:#fff;border:1px solid var(--line);border-left:6px solid var(--orange);border-radius:16px;padding:28px 30px;margin-top:28px;box-shadow:0 18px 40px -30px rgba(0,33,165,.35);}
+  .card h2{font-family:var(--serif);font-weight:600;font-size:22px;color:var(--blue);margin-bottom:4px;}
+  .card .sub{font-size:15px;color:var(--muted);margin-bottom:18px;}
+  label.fld{display:block;font-weight:600;font-size:14px;margin:16px 0 6px;color:var(--ink);}
+  label.fld span{color:var(--orange-deep);}
+  .ipt,textarea.ipt,select.ipt{width:100%;border:1.5px solid var(--line);border-radius:12px;padding:13px 15px;font-family:var(--sans);font-size:16px;color:var(--ink);background:var(--cream);}
+  textarea.ipt{min-height:120px;resize:vertical;line-height:1.5;}
+  .ipt:focus{outline:none;border-color:var(--blue);background:#fff;}
+  .btn{display:inline-block;width:100%;height:54px;font-family:var(--sans);font-weight:700;font-size:17px;border-radius:999px;border:none;background:var(--orange);color:#fff;cursor:pointer;margin-top:22px;}
+  .btn:hover{background:var(--orange-deep);}
+  .btn:disabled{opacity:.7;cursor:default;}
+  .msg{margin-top:14px;font-size:15px;font-weight:600;}
+  .msg.error{color:var(--orange-deep);}
+  .micro{font-size:12.5px;color:var(--muted);text-align:center;margin-top:14px;}
+  .done{text-align:center;padding:14px 0 8px;}
+  .done .em{font-size:42px;}
+  .done h2{margin:10px 0 6px;}
+  .done p{font-size:16px;color:#3c3830;}
+  .back{display:inline-block;margin-top:22px;font-size:14px;color:var(--muted);}
+  footer{border-top:1px solid var(--line);padding:26px 0;font-size:13px;color:var(--muted);}
+  .hp{position:absolute;left:-5000px;}
+</style>
+</head>
+<body>
+  <nav class="nav"><div class="wrap" style="padding-left:0;padding-right:0;"><a class="brand" href="/">The 352 Beat<small>A Common Ground Press project</small></a></div></nav>
+
+  <main class="gate">
+    <div class="wrap">
+      <span class="eyebrow">From our readers</span>
+      <h1>Got a tip?</h1>
+      <p class="teaser">A new business, an event, good news, or a shoutout — tell us what's happening around Lake County. Our readers are our best reporters.</p>
+
+      <div class="card" id="card">
+        <h2>Send us the scoop</h2>
+        <p class="sub">Takes 30 seconds. You might just see it in the next issue.</p>
+
+        <form id="tipform" onsubmit="return false;">
+          <label class="fld" for="tip">What's the tip? <span>*</span></label>
+          <textarea class="ipt" id="tip" name="tip" placeholder="Tell us what's happening — the more detail, the better."></textarea>
+
+          <label class="fld" for="category">What's it about?</label>
+          <select class="ipt" id="category" name="category">
+            <option value="event">An event</option>
+            <option value="business">A new business / opening or closing</option>
+            <option value="good_news">Good news / a shoutout</option>
+            <option value="other" selected>Something else</option>
+          </select>
+
+          <label class="fld" for="headline">Short headline (optional)</label>
+          <input class="ipt" id="headline" name="headline" placeholder="e.g. New taco spot on Main Street" />
+
+          <label class="fld" for="town">Town / area (optional)</label>
+          <input class="ipt" id="town" name="town" placeholder="e.g. Leesburg, Mount Dora, The Villages" />
+
+          <label class="fld" for="name">Your name (optional)</label>
+          <input class="ipt" id="name" name="name" placeholder="So we can credit you" />
+
+          <label class="fld" for="contact">Email or phone (optional)</label>
+          <input class="ipt" id="contact" name="contact" placeholder="In case we need to follow up" />
+
+          <input class="hp" type="text" id="website" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+          <button type="submit" class="btn" id="submitbtn">Send the tip &rarr;</button>
+          <div class="msg error" id="msg" style="display:none;"></div>
+        </form>
+        <p class="micro">No spam. We just want to keep the 352 in the loop.</p>
+      </div>
+
+      <a class="back" href="/">&larr; Back to The 352 Beat</a>
+    </div>
+  </main>
+
+  <footer><div class="wrap">The 352 Beat &middot; a Common Ground Press project &middot; ATLV Solutions</div></footer>
+
+<script>
+  (function(){
+    var API="https://thenewsletterfactory.com/api/tips";
+    var form=document.getElementById("tipform");
+    var btn=document.getElementById("submitbtn");
+    var msg=document.getElementById("msg");
+    var card=document.getElementById("card");
+    function val(id){var e=document.getElementById(id);return e?e.value:"";}
+    function showErr(t){msg.textContent=t;msg.style.display="block";}
+    form.addEventListener("submit",function(){
+      msg.style.display="none";
+      if(!val("tip").trim()){showErr("Please tell us the tip.");return;}
+      btn.textContent="Sending\u2026";btn.disabled=true;
+      fetch(API,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({
+        tip:val("tip"),category:val("category"),headline:val("headline"),
+        town:val("town"),name:val("name"),contact:val("contact"),website:val("website")
+      })}).then(function(r){
+        if(!r.ok){return r.json().catch(function(){return {};}).then(function(d){throw new Error(d.error||"Something went wrong.");});}
+        card.innerHTML='<div class="done"><div class="em">\uD83D\uDCE8</div><h2 style="font-family:var(--serif);color:var(--blue);font-weight:900;">Thanks — got it!</h2><p>Our team will take a look. You might just see it in the next issue of The 352 Beat.</p></div>';
+      }).catch(function(e){
+        btn.textContent="Send the tip →";btn.disabled=false;
+        showErr(e.message||"Something went wrong. Please try again.");
+      });
+    });
+  })();
+</script>
+</body>
+</html>
