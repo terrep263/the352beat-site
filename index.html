@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The 352 Beat — Your Week in North-Central Florida</title>
+<meta name="description" content="The 352 Beat is your free weekly guide to North-Central Florida — the events, local businesses, and community stories worth your time across Lake, Marion, Sumter, Alachua, Citrus, and Hernando counties." />
+<meta property="og:title" content="The 352 Beat" />
+<meta property="og:description" content="Your free weekly guide to everything happening in the 352 — events, local business, and the stories that make our corner of Florida home." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://news-letter.s3.wasabisys.com/images/6a8f84e0-53dc-4f05-9a7c-d4b295719d73.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,900&family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --blue:#0021A5; --blue-deep:#001A82; --orange:#FA4616; --orange-deep:#D8390E;
+    --aqua:#1FA8B8; --green:#4C8C3F; --cream:#FBF6EC; --cream-2:#F4ECDA;
+    --ink:#23201A; --muted:#6B6457; --line:#E7DEC9;
+    --serif:'Fraunces',Georgia,serif; --sans:'Libre Franklin',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased;}
+  a{color:var(--blue);text-decoration:none;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px;}
+  .serif{font-family:var(--serif);}
+  .eyebrow{font-family:var(--sans);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--orange-deep);}
+
+  .nav{border-bottom:2px solid var(--blue);background:var(--cream);}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:18px;padding-bottom:18px;gap:16px;}
+  .brand{font-family:var(--serif);font-weight:900;font-size:24px;color:var(--blue);letter-spacing:-.01em;line-height:1;}
+  .brand small{display:block;font-family:var(--sans);font-weight:600;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:3px;}
+  .btn{display:inline-block;font-family:var(--sans);font-weight:700;font-size:15px;border-radius:999px;padding:13px 26px;cursor:pointer;border:none;transition:transform .12s ease,background .2s ease;}
+  .btn-orange{background:var(--orange);color:#fff;}
+  .btn-orange:hover{background:var(--orange-deep);transform:translateY(-1px);}
+  .btn-blue{background:var(--blue);color:#fff;}
+  .btn-blue:hover{background:var(--blue-deep);transform:translateY(-1px);}
+  .nav .btn{padding:10px 22px;font-size:14px;}
+
+  .hero{padding:64px 0 56px;}
+  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;}
+  .hero h1{font-family:var(--serif);font-weight:900;font-size:clamp(40px,5.4vw,68px);line-height:1.02;letter-spacing:-.02em;color:var(--blue);margin:16px 0 18px;}
+  .hero h1 em{font-style:italic;color:var(--orange);}
+  .hero p.lede{font-size:20px;color:var(--muted);max-width:30ch;margin-bottom:8px;}
+  .trust{font-size:14px;color:var(--muted);margin-top:18px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+  .trust b{color:var(--green);}
+
+  .signup{background:#fff;border:1px solid var(--line);border-radius:20px;padding:30px 28px;box-shadow:0 18px 40px -28px rgba(0,33,165,.35);}
+  .signup h2{font-family:var(--serif);font-weight:600;font-size:24px;color:var(--blue);margin-bottom:6px;}
+  .signup .sub{font-size:15px;color:var(--muted);margin-bottom:18px;}
+  .sendfox-form p{margin:0 0 14px;}
+  .sendfox-form input[type=email]{width:100%;height:54px;border:1.5px solid var(--line);border-radius:12px;padding:0 16px;font-family:var(--sans);font-size:16px;color:var(--ink);background:var(--cream);transition:border-color .2s ease;}
+  .sendfox-form input[type=email]:focus{outline:none;border-color:var(--blue);background:#fff;}
+  .sendfox-form label.gdpr{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:var(--muted);line-height:1.45;cursor:pointer;}
+  .sendfox-form input[type=checkbox]{margin-top:3px;width:16px;height:16px;accent-color:var(--orange);flex:0 0 auto;}
+  .sendfox-form button{width:100%;height:54px;font-size:17px;}
+  .micro{font-size:12.5px;color:var(--muted);text-align:center;margin-top:12px;}
+
+  section.band{padding:64px 0;border-top:1px solid var(--line);}
+  .label{display:inline-block;font-family:var(--sans);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--aqua);border-top:3px solid var(--aqua);padding-top:8px;margin-bottom:18px;}
+  h2.head{font-family:var(--serif);font-weight:900;font-size:clamp(28px,3.6vw,40px);letter-spacing:-.015em;color:var(--blue);margin-bottom:10px;max-width:20ch;}
+  .sub-lead{font-size:18px;color:var(--muted);max-width:60ch;margin-bottom:32px;}
+
+  .story-card{background:#fff;border:1px solid var(--line);border-left:6px solid var(--orange);border-radius:14px;padding:30px 32px;}
+  .story-card .where{font-family:var(--sans);font-weight:600;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:10px;}
+  .story-card h3{font-family:var(--serif);font-weight:700;font-size:clamp(24px,3.2vw,34px);line-height:1.12;color:var(--ink);margin-bottom:12px;}
+  .story-card p{font-size:18px;color:#3c3830;margin-bottom:16px;}
+  .story-card a.more{font-weight:700;color:var(--orange-deep);}
+  .story-card a.more:hover{text-decoration:underline;}
+
+  .picks{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:18px;}
+  .pick{background:var(--blue);color:#fff;border-radius:16px;padding:26px 24px;}
+  .pick .tag{font-family:var(--sans);font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#FFD9CC;margin-bottom:12px;}
+  .pick h3{font-family:var(--serif);font-weight:600;font-size:23px;line-height:1.15;margin-bottom:8px;}
+  .pick p{font-size:15px;color:#C9D2F4;line-height:1.5;}
+  .pick.alt{background:var(--aqua);}
+  .pick.alt .tag{color:#073a41;} .pick.alt p{color:#06414a;} .pick.alt h3{color:#06303a;}
+  .pick.alt2{background:var(--green);} .pick.alt2 .tag{color:#dff3d4;} .pick.alt2 p{color:#e4f3dc;}
+
+  .secs{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:8px;}
+  .sec{background:var(--cream-2);border:1px solid var(--line);border-radius:14px;padding:22px 24px;transition:transform .15s ease,border-color .2s ease;}
+  .sec:hover{transform:translateY(-3px);border-color:var(--orange);}
+  .sec h4{font-family:var(--serif);font-weight:600;font-size:20px;color:var(--blue);margin-bottom:6px;}
+  .sec p{font-size:15.5px;color:var(--muted);}
+
+  .cta{background:var(--blue);color:#fff;text-align:center;padding:72px 0;}
+  .cta h2{font-family:var(--serif);font-weight:900;font-size:clamp(30px,4.4vw,48px);letter-spacing:-.02em;margin-bottom:14px;}
+  .cta p{font-size:18px;color:#C9D2F4;max-width:52ch;margin:0 auto 28px;}
+  .cta .btn-orange{font-size:18px;padding:16px 38px;}
+
+  footer{background:var(--cream);padding:34px 0;border-top:1px solid var(--line);}
+  footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:13.5px;color:var(--muted);}
+  footer .areas{font-weight:600;color:var(--ink);}
+
+  .reveal{opacity:0;transform:translateY(14px);animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards;}
+  .reveal.d1{animation-delay:.08s;} .reveal.d2{animation-delay:.16s;} .reveal.d3{animation-delay:.24s;}
+  @keyframes rise{to{opacity:1;transform:none;}}
+
+  @media(max-width:820px){
+    .hero-grid{grid-template-columns:1fr;gap:32px;}
+    .hero p.lede{max-width:none;}
+    .picks{grid-template-columns:1fr;}
+    .secs{grid-template-columns:1fr;}
+    .nav .brand small{display:none;}
+  }
+</style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="wrap">
+      <div class="brand">The 352 Beat<small>A Common Ground Press project</small></div>
+      <a href="#signup" class="btn btn-orange">Subscribe free</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow reveal">North-Central Florida &middot; free weekly</span>
+        <h1 class="reveal d1">Your week in the 352, <em>sorted.</em></h1>
+        <p class="lede reveal d2">From Leesburg to Ocala to The Villages — the events, local businesses, and stories worth your time, in one friendly email every week.</p>
+        <div class="trust reveal d2"><span>Free forever</span> &middot; <span>One email a week</span> &middot; <b>Unsubscribe anytime</b></div>
+      </div>
+
+      <div class="signup reveal d3" id="signup">
+        <h2>Join your neighbors</h2>
+        <p class="sub">Get The 352 Beat in your inbox every week.</p>
+        <form method="post" action="https://sendfox.com/form/m7zxyv/m7qjyr" class="sendfox-form" id="m7qjyr" data-async="true" data-recaptcha="true">
+          <p><input type="email" id="sendfox_form_email" placeholder="Enter your email address" name="email" required /></p>
+          <p><label class="gdpr"><input type="checkbox" name="gdpr" value="1" required /> <span>I agree to receive email updates from The 352 Beat. Unsubscribe anytime.</span></label></p>
+          <div style="position:absolute;left:-5000px;" aria-hidden="true"><input type="text" name="a_password" tabindex="-1" value="" autocomplete="off" /></div>
+          <p><button type="submit" class="btn btn-orange">Sign Me Up!</button></p>
+        </form>
+        <p class="micro">No spam. No noise. Just your community.</p>
+      </div>
+    </div>
+  </header>
+
+  <section class="band" style="padding-top:48px;">
+    <div class="wrap">
+      <span class="label">Story of the Week</span>
+      <div class="story-card" id="top-story">
+        <div class="where">North-Central Florida</div>
+        <h3>This week's neighbor story lands right here.</h3>
+        <p>Every week we spotlight one human-interest story from around the 352 — a neighbor, a small kindness, a local triumph. Subscribe and you'll never miss it.</p>
+        <a class="more" href="#signup">Get it in your inbox &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <span class="label">Every single week</span>
+      <h2 class="head">Three picks, hand-chosen for you.</h2>
+      <p class="sub-lead">The good stuff, sorted from the noise — so you always know the one thing to do, the place to support, and where to eat.</p>
+      <div class="picks">
+        <div class="pick"><div class="tag">Event of the Week</div><h3>The one to circle on your calendar</h3><p>From festivals on the square to concerts by the lake.</p></div>
+        <div class="pick alt"><div class="tag">Business of the Week</div><h3>A local spot worth knowing</h3><p>The shops and makers that make the 352 ours.</p></div>
+        <div class="pick alt2"><div class="tag">Best Place to Dine</div><h3>Where to eat this week</h3><p>One great table, picked fresh every issue.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" style="padding-top:8px;">
+    <div class="wrap">
+      <span class="label" style="color:var(--green);border-color:var(--green);">Plus every issue</span>
+      <h2 class="head">Everything that matters where you live.</h2>
+      <div class="secs">
+        <div class="sec"><h4>Government &amp; Development</h4><p>The decisions and projects shaping your town — in plain language you can actually follow.</p></div>
+        <div class="sec"><h4>Local Business</h4><p>What's opening, what's closing, and the places worth your time and your dollars.</p></div>
+        <div class="sec"><h4>Events</h4><p>The festivals, meetings, and gatherings worth showing up for this week.</p></div>
+        <div class="sec"><h4>Community &amp; Human Interest</h4><p>The neighbors and stories that make our corner of Florida feel like home.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap">
+      <h2>Know your corner of Florida.</h2>
+      <p>No clickbait, no outrage, no selling your attention. Just a steady, trusted read for the 352 — the kind of thing you'll still want in ten years.</p>
+      <a href="#signup" class="btn btn-orange">Subscribe free</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <span>The 352 Beat &middot; a Common Ground Press project &middot; ATLV Solutions</span>
+      <span class="areas">Lake &middot; Marion &middot; Sumter &middot; Alachua &middot; Citrus &middot; Hernando</span>
+    </div>
+  </footer>
+
+<script>
+  (function(){
+    var ENDPOINT = "https://thenewsletterfactory.com/api/top-story";
+    function esc(s){var d=document.createElement("div");d.textContent=s==null?"":String(s);return d.innerHTML;}
+    fetch(ENDPOINT).then(function(r){return r.json();}).then(function(d){
+      var s = d && d.story;
+      if(!s || !s.headline) return;
+      var box = document.getElementById("top-story");
+      if(!box) return;
+      var link = s.link_url ? esc(s.link_url) : "#signup";
+      var more = s.link_url ? "Read the full story &rarr;" : "Get it in your inbox &rarr;";
+      box.innerHTML =
+        '<div class="where">'+ esc(s.location || "The 352") +'</div>' +
+        '<h3>'+ esc(s.headline) +'</h3>' +
+        (s.blurb ? '<p>'+ esc(s.blurb) +'</p>' : '') +
+        '<a class="more" href="'+ link +'"'+ (s.link_url ? ' target="_blank" rel="noopener"' : '') +'>'+ more +'</a>';
+    }).catch(function(){});
+  })();
+</script>
+<script src="https://cdn.sendfox.com/js/form.js" charset="utf-8"></script>
+</body>
+</html>
