@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Read the full story — The 352 Beat</title>
+<meta name="robots" content="noindex" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,900&family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{--blue:#0021A5;--blue-deep:#001A82;--orange:#FA4616;--orange-deep:#D8390E;--aqua:#1FA8B8;--green:#4C8C3F;--cream:#FBF6EC;--ink:#23201A;--muted:#6B6457;--line:#E7DEC9;--serif:'Fraunces',Georgia,serif;--sans:'Libre Franklin',system-ui,sans-serif;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased;}
+  a{color:var(--blue);text-decoration:none;}
+  .wrap{max-width:760px;margin:0 auto;padding:0 28px;}
+  .nav{border-bottom:2px solid var(--blue);}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;}
+  .brand{font-family:var(--serif);font-weight:900;font-size:22px;color:var(--blue);line-height:1;}
+  .brand small{display:block;font-family:var(--sans);font-weight:600;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:3px;}
+  .gate{padding:60px 0 72px;}
+  .eyebrow{font-family:var(--sans);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--orange-deep);}
+  h1{font-family:var(--serif);font-weight:900;font-size:clamp(30px,4.6vw,46px);line-height:1.08;letter-spacing:-.02em;color:var(--blue);margin:14px 0 14px;}
+  .teaser{font-size:19px;color:#3c3830;margin-bottom:8px;}
+  .where{font-family:var(--sans);font-weight:600;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:10px;}
+  .card{background:#fff;border:1px solid var(--line);border-left:6px solid var(--orange);border-radius:16px;padding:28px 30px;margin-top:28px;box-shadow:0 18px 40px -30px rgba(0,33,165,.35);}
+  .card h2{font-family:var(--serif);font-weight:600;font-size:22px;color:var(--blue);margin-bottom:4px;}
+  .card .sub{font-size:15px;color:var(--muted);margin-bottom:18px;}
+  .sendfox-form p{margin:0 0 14px;}
+  .sendfox-form input[type=email]{width:100%;height:54px;border:1.5px solid var(--line);border-radius:12px;padding:0 16px;font-family:var(--sans);font-size:16px;color:var(--ink);background:var(--cream);}
+  .sendfox-form input[type=email]:focus{outline:none;border-color:var(--blue);background:#fff;}
+  .sendfox-form label.gdpr{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:var(--muted);line-height:1.45;cursor:pointer;}
+  .sendfox-form input[type=checkbox]{margin-top:3px;width:16px;height:16px;accent-color:var(--orange);flex:0 0 auto;}
+  .btn{display:inline-block;width:100%;height:54px;font-family:var(--sans);font-weight:700;font-size:17px;border-radius:999px;border:none;background:var(--orange);color:#fff;cursor:pointer;}
+  .btn:hover{background:var(--orange-deep);}
+  .micro{font-size:12.5px;color:var(--muted);text-align:center;margin-top:12px;}
+  .back{display:inline-block;margin-top:22px;font-size:14px;color:var(--muted);}
+  footer{border-top:1px solid var(--line);padding:26px 0;font-size:13px;color:var(--muted);}
+</style>
+</head>
+<body>
+  <nav class="nav"><div class="wrap" style="padding-left:0;padding-right:0;"><a class="brand" href="/">The 352 Beat<small>A Common Ground Press project</small></a></div></nav>
+
+  <main class="gate">
+    <div class="wrap">
+      <span class="eyebrow">Story of the Week</span>
+      <div class="where" id="where">The 352</div>
+      <h1 id="headline">This week's story</h1>
+      <p class="teaser" id="teaser">Enter your email to read the full story — and get The 352 Beat every week.</p>
+
+      <div class="card">
+        <h2>Read the full story</h2>
+        <p class="sub">Drop your email and it's yours — plus the weekly issue. Free, unsubscribe anytime.</p>
+        <form method="post" action="https://sendfox.com/form/m7zxyv/m7qjyr" class="sendfox-form" id="m7qjyr" data-async="true" data-recaptcha="true">
+          <p><input type="email" id="sendfox_form_email" placeholder="Enter your email address" name="email" required /></p>
+          <p><label class="gdpr"><input type="checkbox" name="gdpr" value="1" required /> <span>I agree to receive email updates from The 352 Beat. Unsubscribe anytime.</span></label></p>
+          <div style="position:absolute;left:-5000px;" aria-hidden="true"><input type="text" name="a_password" tabindex="-1" value="" autocomplete="off" /></div>
+          <p><button type="submit" class="btn">Unlock the story &rarr;</button></p>
+        </form>
+        <p class="micro">No spam. No noise. Just your community.</p>
+      </div>
+      <a class="back" href="/">&larr; Back to The 352 Beat</a>
+    </div>
+  </main>
+
+  <footer><div class="wrap">The 352 Beat &middot; a Common Ground Press project &middot; ATLV Solutions</div></footer>
+
+<script>
+  (function(){
+    function esc(s){var d=document.createElement("div");d.textContent=s==null?"":String(s);return d.innerHTML;}
+    fetch("https://thenewsletterfactory.com/api/top-story").then(function(r){return r.json();}).then(function(d){
+      var s=d&&d.story; if(!s||!s.headline) return;
+      document.getElementById("headline").innerHTML=esc(s.headline);
+      document.getElementById("where").innerHTML=esc(s.location||"The 352");
+      if(s.blurb) document.getElementById("teaser").innerHTML=esc(s.blurb);
+      document.title=s.headline+" — The 352 Beat";
+    }).catch(function(){});
+  })();
+</script>
+<script src="https://cdn.sendfox.com/js/form.js" charset="utf-8"></script>
+</body>
+</html>
